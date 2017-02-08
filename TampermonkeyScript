@@ -1,0 +1,43 @@
+// ==UserScript==
+// @name         Youtube show hide video
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Youtube video button to hide/show videos and thumnails
+// @author       Anoop Kumar
+// @match        https://www.youtube.com/*
+// @require     http://code.jquery.com/jquery-latest.js
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    var isVisible = true;
+    console.log("kind of refreshed.." + isVisible);
+    $(document).ready(function(){        
+        console.log( $("#yt-masthead-user"));
+        var usrButton = $('<input/>').attr({ type: 'button',
+                                            id:'usrButton',
+                                            class:'yt-uix-button  yt-uix-button-size-default yt-uix-button-default',
+                                            value:'Show/Hide Video'});
+        $("#yt-masthead-user").prepend(usrButton);
+        //$(".html5-video-container").hide();
+        $("#usrButton").click(function(e){
+            console.log(isVisible);
+            if(isVisible) {               
+                console.log("hiding");
+                //Hiding video
+                $(".html5-video-container").hide();
+                //to hide thumnails
+                $(".yt-thumb-clip").hide();
+                $(".thumb-wrapper").hide()
+                isVisible = false; 
+            } else {    
+                console.log("showing..");
+                $(".html5-video-container").show();     
+                $(".yt-thumb-clip").show();
+                $(".thumb-wrapper").show()
+                isVisible = true;
+            }
+        });
+    });
+})();
