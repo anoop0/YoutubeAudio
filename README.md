@@ -1,2 +1,2 @@
 # YoutubeAudio
-Youtube button to hide and show videos
+Youtube button to hide / show videos and thumbnails.
