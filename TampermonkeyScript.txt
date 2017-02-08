@@ -11,6 +11,8 @@
 
 (function() {
     'use strict';
+    
+    //Script content start for Greasemonkey 
     var isVisible = true;
     console.log("kind of refreshed.." + isVisible);
     $(document).ready(function(){        
@@ -40,4 +42,5 @@
             }
         });
     });
+ //Script Ends.
 })();
