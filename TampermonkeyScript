@@ -29,13 +29,13 @@
                 $(".html5-video-container").hide();
                 //to hide thumnails
                 $(".yt-thumb-clip").hide();
-                $(".thumb-wrapper").hide()
+                $(".thumb-wrapper").hide();
                 isVisible = false; 
             } else {    
                 console.log("showing..");
                 $(".html5-video-container").show();     
                 $(".yt-thumb-clip").show();
-                $(".thumb-wrapper").show()
+                $(".thumb-wrapper").show();
                 isVisible = true;
             }
         });
