@@ -1,4 +1,4 @@
-# YoutubeAudio
+# Youtube Audio
 Youtube button to hide / show videos and thumbnails.  
 Installation:  
 Use TampermonkeyScript.txt content use script as per your browser.  
